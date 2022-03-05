@@ -86,7 +86,7 @@ postBtn.addEventListener("click", () => {
     postGif == ""
   ) {
     document.querySelector(".post-data").innerHTML += postEle;
-    document.querySelector(".p-img").remove();
+    document.querySelector(".p-img").style.display = "none";
     document.querySelector(".search").value = "";
     close();
   } else {
