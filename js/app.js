@@ -81,7 +81,10 @@ postBtn.addEventListener("click", () => {
       document.querySelector(".search").value = "";
       close();
     }
-  } else if (postGif == "") {
+  } else if (
+    postGif == "" ||
+    postGif == "https://nsvenkatesh.github.io/codemancers/"
+  ) {
     document.querySelector(".post-data").innerHTML += postEle;
     document.querySelector(".search").value = "";
     document.querySelector(".p-img").style.display = "none";
