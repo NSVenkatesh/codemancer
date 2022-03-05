@@ -6,7 +6,13 @@ let inputHide = document.querySelector(".input-main");
 let gifHide = document.querySelector(".gif-search");
 let popup = document.querySelector(".text-cover");
 let setGif = document.querySelector(".set-gif");
-let postBtn = document.querySelector(".btn-post");
+let userName = document.querySelector(".user-name");
+let getUserName = window.prompt("Enter User name: ", "Anonymous");
+if (getUserName == null || getUserName == "") {
+  userName.innerHTML = "Welcome Anonymous";
+} else {
+  userName.innerHTML = "Welcome " + getUserName;
+}
 popup.addEventListener("click", () => {
   if (count == 0) {
     inputHide.style.display = "block";
@@ -40,7 +46,9 @@ gifSrc = (gif) => {
   countGif = 0;
   gifHide.style.display = "none";
 };
+let postBtn = document.querySelector(".btn-post");
 postBtn.addEventListener("click", () => {
+  let postUserName = userName.innerHTML.slice(8);
   let postInput = document.querySelector(".text-area").value;
   let postGif = setGif.src;
   let currentDate = new Date();
@@ -53,7 +61,7 @@ postBtn.addEventListener("click", () => {
                       <div class="p-flex">
                           <i class="fa-solid fa-circle-user"></i>
                           <div class="about">
-                              <p class="name">Venkatesh</p>
+                              <p class="name">${postUserName}</p>
                               <p class="time">${currentDate}</p>
                           </div>
                       </div>
