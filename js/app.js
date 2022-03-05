@@ -71,7 +71,10 @@ postBtn.addEventListener("click", () => {
                   </div>
                 </div>`;
   if (postInput == "") {
-    if (postGif == "") {
+    if (
+      postGif == "" ||
+      postGif == "https://nsvenkatesh.github.io/codemancers/"
+    ) {
       alert("Invalid input");
     } else {
       document.querySelector(".post-data").innerHTML += postEle;
