@@ -82,12 +82,12 @@ postBtn.addEventListener("click", () => {
       close();
     }
   } else if (
-    postGif == "" ||
-    postGif == "https://nsvenkatesh.github.io/codemancers/"
+    postGif == "https://nsvenkatesh.github.io/codemancers/" ||
+    postGif == ""
   ) {
     document.querySelector(".post-data").innerHTML += postEle;
+    document.querySelector(".p-img").remove();
     document.querySelector(".search").value = "";
-    document.querySelector(".p-img").style.display = "none";
     close();
   } else {
     document.querySelector(".post-data").innerHTML += postEle;
